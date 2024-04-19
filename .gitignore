@@ -1,0 +1,94 @@
+# plaintext     (this file is written in plaintext syntax)
+
+# find recommended templetes in this website: https://github.com/github/gitignore
+
+# Include any file/directory names that need not be tracked such as test, .vscode, etc.
+.hide
+
+# Python specific: Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C++ specific
+*.o
+*.obj
+*.so
+*.exe
+*.dll
+*.out
+*.lib
+*.slo
+*.lo
+*.pch
+*.gch
+*.d
+
+# Java specific
+*.class
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+
+# Web development specific
+node_modules/
+/dist/
+/.pnp
+.pnp.js
+# build files
+*.log
+
+# JetBrains IDEs (IntelliJ, PyCharm, etc.)
+.idea/
+*.iml
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Text editor backups
+*~
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Linux specific
+.*.swp
+.*.swo
+
+# Windows specific
+Desktop.ini
+
+# macOS specific
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
