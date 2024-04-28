@@ -21,20 +21,20 @@
     padding: 20px;
 }
 
-/* Product Card Styles */
-.product-card {
-    width: 200px;
-    margin: 10px;
-    border: 1px solid #ddd;
-    padding: 10px;
-}
-
-/* Thumbnail Image Styles */
+/* Product Card Image Styles */
 .product-thumbnail {
     width: 100%;
     height: auto;
-    border: none;
-    margin-bottom: 10px;
+    object-fit: cover; /* This ensures that images cover the area nicely */
+    border-radius: 4px; /* Optional: Adds rounded corners to the images */
+}
+
+/* Ensuring the product cards have a consistent height */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This distributes space evenly inside the card */
+    height: 350px; /* Adjust the height as needed */
 }
 
 /* User Profile Styles */

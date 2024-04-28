@@ -1,5 +1,55 @@
+// Add product objects with id, name, description, image, price, and detailPageUrl
 const products = [
-    // Add product objects with id, name, description, image, price, and detailPageUrl
+    // Women's Clothing
+    {
+        id: 1,
+        category: 'Woman',
+        name: 'Floral Summer Dress',
+        description: 'A beautiful summer dress with floral prints, perfect for any casual outing.',
+        image: 'path-to-womens-dress-image', // Replace with actual image path
+        price: '29.99',
+        detailPageUrl: 'link-to-detailed-product-page-for-womens-dress' // Replace with actual link
+    },
+    // Men's Clothing
+    {
+        id: 2,
+        category: 'Man',
+        name: 'Classic Denim Jeans',
+        description: 'Rugged and stylish denim jeans that offer both comfort and durability.',
+        image: 'path-to-mens-jeans-image', // Replace with actual image path
+        price: '39.99',
+        detailPageUrl: 'link-to-detailed-product-page-for-mens-jeans' // Replace with actual link
+    },
+    // Girl's Clothing
+    {
+        id: 3,
+        category: 'Girl',
+        name: 'Cute Tulle Skirt',
+        description: 'Adorable tulle skirt for girls, perfect for parties and playdates.',
+        image: 'path-to-girls-skirt-image', // Replace with actual image path
+        price: '19.99',
+        detailPageUrl: 'link-to-detailed-product-page-for-girls-skirt' // Replace with actual link
+    },
+    // Boy's Clothing
+    {
+        id: 4,
+        category: 'Boy',
+        name: 'Graphic Tee',
+        description: 'Cool and comfortable graphic tee for boys, great for everyday wear.',
+        image: 'path-to-boys-tee-image', // Replace with actual image path
+        price: '14.99',
+        detailPageUrl: 'link-to-detailed-product-page-for-boys-tee' // Replace with actual link
+    },
+    // Baby's Clothing
+    {
+        id: 5,
+        category: 'Baby',
+        name: 'Soft Onesie',
+        description: 'Super soft and snuggly onesie for babies, made from gentle fabric.',
+        image: 'path-to-baby-onesie-image', // Replace with actual image path
+        price: '9.99',
+        detailPageUrl: 'link-to-detailed-product-page-for-baby-onesie' // Replace with actual link
+    }
 ];
 
 function displayProducts() {

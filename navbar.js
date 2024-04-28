@@ -1,4 +1,5 @@
 // The HTML content being assigned to innerHTML is a template literal (denoted by backticks `). 
+// Template literals allow for multi-line strings and could include embedded expressions
 document.getElementById('navbar').innerHTML = `
     <nav>
         <ul>
