@@ -1,12 +1,18 @@
+// Add product objects with id, name, description, image, price, and detailPageUrl
+
+// Fabricated prices, descriptions and names for all listed products below.
+// Credit to: all images from Unsplash website (https://unsplash.com/).
+
 const products = [
     // Women's Clothing
     {
+        // Credit to: https://unsplash.com/photos/green-sleeveless-dress-hanged-on-white-wall-VyI0GBHSsJ8
         id: 1,
         category: 'Woman',
-        name: 'Floral Summer Dress',
-        description: 'A beautiful summer dress with floral prints, perfect for any casual outing.',
-        image: 'path-to-womens-dress-image', // Replace with actual image path
-        price: '29.99',
+        name: 'Green Sleeveless Dress',
+        description: 'A beautiful green sleeveless dress. Comfortable and semi-causual. Perfect for daliy and dating dress.',
+        image: 'assets/images/Woman.jpg', // Replace with actual image path
+        price: '99.98',
         detailPageUrl: 'link-to-detailed-product-page-for-womens-dress' // Replace with actual link
     },
     // Men's Clothing
@@ -55,13 +61,16 @@ function displayProducts() {
     const productList = document.getElementById('product-list');
     productList.innerHTML = products.map(product => `
         <div class="product-card">
+            <div class="product-category">${product.category}</div>
             <a href="${product.detailPageUrl}">
                 <img src="${product.image}" alt="${product.name}" class="product-thumbnail" />
             </a>
-            <h3>${product.name}</h3>
-            <p>${product.description}</p>
-            <p>$${product.price}</p>
-            <button onclick="addToCart(${product.id})">Add to Cart</button>
+            <div class="product-details">
+                <h3>${product.name}</h3>
+                <p>${product.description}</p>
+                <p class="product-price">$${product.price}</p>
+                <button onclick="addToCart(${product.id})">Add to Cart</button>
+            </div>
         </div>
     `).join('');
 }
