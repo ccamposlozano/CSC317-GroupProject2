@@ -3,28 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clothing E-Commerce Store</title>
+    <title>My E-Commerce Store</title>
+    <!-- Link to the main stylesheet for styling the website -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation Bar -->
+    <!-- This is the header section where the navigation bar will be rendered -->
+    <!-- The navbar.js will populate this section with navigation links -->
     <header id="navbar"></header>
 
     <!-- Main Content -->
+    <!-- This section will display all the products -->
+    <!-- The products.js will dynamically insert product cards here -->
     <main id="product-list"></main>
 
     <!-- User Profile -->
+    <!-- Hidden section for user profile, shown when user clicks profile link -->
+    <!-- You can add user profile related HTML here -->
     <section id="user-profile" style="display:none;"></section>
 
     <!-- Shopping Cart -->
+    <!-- This section represents the shopping cart where added items will be listed -->
+    <!-- The cart.js will handle the functionality to show or hide the cart -->
     <section id="shopping-cart"></section>
 
     <!-- Checkout Page -->
+    <!-- Hidden section for checkout process, shown when user proceeds to checkout -->
+    <!-- You can add checkout form and related HTML here -->
     <section id="checkout-page" style="display:none;"></section>
 
     <!-- Login/Logout -->
+    <!-- This section is for user authentication -->
+    <!-- The auth.js will handle the login/logout functionality -->
     <section id="auth"></section>
 
+    <!-- JavaScript Files -->
+    <!-- Scripts for each modular functionality of the website -->
+    <!-- These scripts will provide interactivity and dynamic content loading -->
     <script src="navbar.js"></script>
     <script src="products.js"></script>
     <script src="userProfile.js"></script>
