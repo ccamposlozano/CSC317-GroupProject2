@@ -1,13 +1,16 @@
 // Add product objects with id, name, description, image, price, and detailPageUrl
+// Fabricated prices, descriptions and names for all listed products below.
+// Credit to: all images from Unsplash website (https://unsplash.com/).
 const products = [
     // Women's Clothing
     {
+        // Credit to: https://unsplash.com/photos/green-sleeveless-dress-hanged-on-white-wall-VyI0GBHSsJ8
         id: 1,
         category: 'Woman',
-        name: 'Floral Summer Dress',
-        description: 'A beautiful summer dress with floral prints, perfect for any casual outing.',
+        name: 'Green Sleeveless Dress',
+        description: 'A beautiful Green Sleeveless Dress. Commforable, semi-casual. Perfect for daily and dating dress.',
         image: 'path-to-womens-dress-image', // Replace with actual image path
-        price: '29.99',
+        price: '99.98', 
         detailPageUrl: 'link-to-detailed-product-page-for-womens-dress' // Replace with actual link
     },
     // Men's Clothing
