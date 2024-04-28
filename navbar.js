@@ -1,3 +1,4 @@
+// The HTML content being assigned to innerHTML is a template literal (denoted by backticks `). 
 document.getElementById('navbar').innerHTML = `
     <nav>
         <ul>
