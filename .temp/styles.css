@@ -1,0 +1,67 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar Styles */
+#navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Product List Styles */
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+/* Product Card Styles */
+.product-card {
+    width: 200px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Thumbnail Image Styles */
+.product-thumbnail {
+    width: 100%;
+    height: auto;
+    border: none;
+    margin-bottom: 10px;
+}
+
+/* User Profile Styles */
+#user-profile {
+    /* Add styles for user profile */
+}
+
+/* Shopping Cart Styles */
+#shopping-cart {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    background-color: #f7f7f7;
+    border-left: 1px solid #ddd;
+    height: 100vh;
+    /* Hide by default */
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Checkout Page Styles */
+#checkout-page {
+    /* Add styles for checkout page */
+}
+
+/* Login/Logout Styles */
+#auth {
+    /* Add styles for authentication section */
+}
