@@ -6,11 +6,13 @@ The file structure & UML (Unified Modeling Language) diagram to represent the re
 ecommerce-website/
 │
 ├── index.html
+├── product-detail.html
 ├── styles.css
 │
 ├── js/
 │   ├── navbar.js
 │   ├── products.js
+│   ├── product-detail.js
 │   ├── userProfile.js
 │   ├── cart.js
 │   ├── checkout.js
@@ -24,10 +26,12 @@ ecommerce-website/
 ```
 
 - **index.html**: The main HTML document.
+- **product-detail.html**: The generic webpage for product detail info. 
 - **styles.css**: The CSS file for styling the entire website.
 - **js/**: This directory contains all JavaScript files, each responsible for different functionalities:
   - **navbar.js**: Manages the navigation bar.
   - **products.js**: Handles the display and management of products.
+  - **product-detail.js**: Show product detail info. Currently is read only, without interactions.
   - **userProfile.js**: Manages user profile interactions.
   - **cart.js**: Handles the shopping cart functionality.
   - **checkout.js**: Manages the checkout process.
