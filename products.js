@@ -17,43 +17,47 @@ const products = [
     },
     // Men's Clothing
     {
+        // credit to: https://unsplash.com/photos/blue-denim-jeans-on-white-textile-5NPId7L1_p4
         id: 2,
         category: 'Man',
         name: 'Classic Denim Jeans',
-        description: 'Rugged and stylish denim jeans that offer both comfort and durability.',
-        image: 'path-to-mens-jeans-image', // Replace with actual image path
-        price: '39.99',
-        detailPageUrl: 'link-to-detailed-product-page-for-mens-jeans' // Replace with actual link
+        description: 'Denim jeans that offer both comfort and durability.',
+        image:  'assets/images/Man.jpg', // Replace with actual image path
+        price: '69.99',
+        detailPageUrl: 'product-detail.html?productId=2' // Replace with actual link
     },
     // Girl's Clothing
     {
+        //credit to: https://unsplash.com/photos/a-little-girl-wearing-glasses-and-a-skirt-FKRGK3GjKtE
         id: 3,
         category: 'Girl',
-        name: 'Cute Tulle Skirt',
-        description: 'Adorable tulle skirt for girls, perfect for parties and playdates.',
-        image: 'path-to-girls-skirt-image', // Replace with actual image path
+        name: 'Cute Black and White Grid Skirt',
+        description: 'Adorable black and white grid skirt for girls, perfect for parties and playdates.',
+        image: 'assets/images/Girl.jpg', // Replace with actual image path
         price: '19.99',
-        detailPageUrl: 'link-to-detailed-product-page-for-girls-skirt' // Replace with actual link
+        detailPageUrl:'product-detail.html?productId=3' // Replace with actual link
     },
     // Boy's Clothing
     {
+        // credit to: https://unsplash.com/photos/man-in-black-crew-neck-t-shirt-and-black-pants-standing-on-stairs-PC_GoetwkjI
         id: 4,
         category: 'Boy',
-        name: 'Graphic Tee',
-        description: 'Cool and comfortable graphic tee for boys, great for everyday wear.',
-        image: 'path-to-boys-tee-image', // Replace with actual image path
-        price: '14.99',
-        detailPageUrl: 'link-to-detailed-product-page-for-boys-tee' // Replace with actual link
+        name: 'Black Cap',
+        description: 'Cool and comfortable cap for boys, great for everyday wear.',
+        image: 'assets/images/Boy.jpg', // Replace with actual image path
+        price: '11.99',
+        detailPageUrl: 'product-detail.html?productId=4' // Replace with actual link
     },
     // Baby's Clothing
     {
+        //credit to: https://unsplash.com/photos/five-pairs-of-socks-pinned-on-clothesline-MDIGo4Ez-0g
         id: 5,
         category: 'Baby',
-        name: 'Soft Onesie',
-        description: 'Super soft and snuggly onesie for babies, made from gentle fabric.',
-        image: 'path-to-baby-onesie-image', // Replace with actual image path
-        price: '9.99',
-        detailPageUrl: 'link-to-detailed-product-page-for-baby-onesie' // Replace with actual link
+        name: 'Soft Short Socks',
+        description: 'Super soft and snuggly short socks for babies. Babies will feel happy wearing it, which delights families. ',
+        image: 'assets/images/Baby.jpg', // Replace with actual image path
+        price: '2.99/pair',
+        detailPageUrl: 'product-detail.html?productId=5' // Replace with actual link
     }
 ];
 
