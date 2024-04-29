@@ -82,3 +82,26 @@
     /* Add styles for authentication section */
 }
 
+/****************************************/
+
+#product-detail-container {
+    padding: 20px;
+    text-align: center; /* Center align the content */
+}
+
+#product-detail-container img {
+    height: 95vh; /* Adjust the percentage based on the estimated space taken by browser UI */
+    width: auto; /* Maintain the aspect ratio */
+    object-fit: contain; /* Ensure the image is fully visible without being cropped */
+}
+
+#product-detail-container h1 {
+    color: #333; /* Dark grey color for the product name */
+    margin-bottom: 10px; /* Space below the product name */
+}
+
+#product-detail-container p {
+    color: #666; /* Lighter grey for the product description and price */
+    font-size: 16px; /* Readable font size */
+    line-height: 1.5; /* Adequate line spacing for readability */
+}

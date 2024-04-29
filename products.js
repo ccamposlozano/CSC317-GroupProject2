@@ -13,7 +13,7 @@ const products = [
         description: 'A beautiful green sleeveless dress. Comfortable and semi-causual. Perfect for daliy and dating dress.',
         image: 'assets/images/Woman.jpg', // Replace with actual image path
         price: '99.98',
-        detailPageUrl: 'link-to-detailed-product-page-for-womens-dress' // Replace with actual link
+        detailPageUrl: 'product-detail.html?productId=1' // Replace with actual link
     },
     // Men's Clothing
     {
