@@ -13,6 +13,12 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/categories.css">
     <link rel="stylesheet" href="css/profile.css">
+    <style>
+        .profile-info p {
+            color: #333; /* Change the font color to a darker shade */
+            font-size: 18px; /* Increase the font size for better readability */
+        }
+    </style>
 </head>
 <body>
     <!-- navbar -->
@@ -40,10 +46,10 @@
     <div class="profile-container">
         <h2>Profile</h2>
         <div class="profile-info">
-            <p><b>Username:</b> {{username}}</p>
-            <p><b>Email:</b> {{email}}</p>
-            <p><b>Address:</b> {{address}}</p>
-            <p><b>Phone Number:</b> {{phone_number}}</p>
+            <p id="username"></p>
+            <p id="email"></p>
+            <p id="address"></p>
+            <p id="phone_number"></p>
         </div>
     </div>
 
