@@ -6,7 +6,7 @@ var phoneNumberElement = document.getElementById('phone_number');
 
 // Assume we have a function to get the user's profile information from the backend API
 function getProfileInfo() {
-    // For demonstration purposes, let's hardcode the user's profile information
+    // Hardcode the user's profile information
     var profileInfo = {
         username: 'John Smith',
         email: 'johnsmith@example.com',
