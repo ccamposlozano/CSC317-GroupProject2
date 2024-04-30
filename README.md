@@ -1,13 +1,12 @@
 # E-Commerce Clothes Store
-
+---
 
 
 ## <span style="color: orange; font-style: italic;">Publicly deployed website address:</span>
 
 
 
-
-
+---
 ## Website Sections
 
 - **Home**: Our main page where you can see featured products and promotions.
