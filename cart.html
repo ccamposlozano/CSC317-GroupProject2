@@ -49,7 +49,7 @@
       /* Make sure both card and checkout-container have the same width */
     }
   </style>
-  
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -61,16 +61,31 @@
     }
 
     .checkout-container {
-      width: 300px;
       background-color: #fff;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      position: absolute;
+      position: fixed;
       top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      right: 0;
+      transform: translateY(-50%);
+      max-width: 90%;
+      width: 300px;
+      z-index: 999;
+      margin-top: 60px;
+      /* Adjust this value to position the container below the navbar */
     }
+
+    @media (max-width: 767px) {
+      .checkout-container {
+        width: 90%;
+        max-width: 400px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 60px;
+      }
+    }
+
 
     .checkout-button {
       width: 100%;
