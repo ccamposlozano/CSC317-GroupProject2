@@ -5,6 +5,13 @@
 ## <span style="color: orange; font-style: italic;">Publicly deployed website address:</span>
 
 
+## Overview
+This Website is a user-friendly platform, that is designed to perform a unique browsing experience
+with the ability to add and purchase any product that the user may find appealing.
+The website is designed to handle a smooth and simple interface, like access to the home menu, for
+direct homepage access or other sections, as well as a secure Login page that handles user 
+authentication.
+
 
 ---
 ## Website Sections
