@@ -2,7 +2,7 @@
 ---
 
 
-## <span style="color: orange; font-style: italic;">Publicly deployed website address:</span>
+## <span style="color: orange; font-style: italic;">Publicly deployed website address:</span> https://fork-csc317-groupproject2.onrender.com
 
 
 ## Overview
