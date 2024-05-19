@@ -1,7 +1,7 @@
 const sqlite3 = require('sqlite3').verbose();
 const bcrypt = require('bcryptjs');
 
-const db = new sqlite3.Database('./backend/database.sqlite');
+const db = new sqlite3.Database('./database.sqlite');
 
 // Create users table
 db.serialize(() => {
