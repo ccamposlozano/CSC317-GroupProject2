@@ -67,52 +67,58 @@
         <div class="line3"></div>
       </div>
     </nav>
-  <!-- navbar --> 
+    <!-- navbar --> 
+
+    <center>
+      <div class="login">
+        <form class="login-form" id="loginForm">
+            <input type="text" placeholder="Username Or Email" id="username" required>
+            <br>
+            <input type="password" placeholder="Password" id="password" required>
+            <br>
+            <button type="submit" class="login-button">LOG IN</button>
+            <button type="button" class="back-button" onclick="window.location='index.html';">BACK</button>
+        </form>
+        <script>
+            document.getElementById('loginForm').onsubmit = async function(event) {
+                event.preventDefault();  // Prevent the default form submission
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+
+                try {
+                    const response = await fetch('/api/login', {  
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ username, password })
+                    });
+
+                    if (response.ok) {
+                        const result = await response.json();
+                        alert('Login successful!');
+                        //save the token in local storage for further authenticated requests
+                        localStorage.setItem('token', result.token);
+                        window.location = 'index.html';  // Redirect to home page on successful login
+                    } else {
+                        alert('Login failed! Check your username and password.');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('Error logging in.');
+                }
+            };
+        </script>
+      </div>
+    </center>
   
-
-   
-
-  <center>
-    <div class="login"  >
-      <form class="login-form" id="loginForm">
-          <input type="text" placeholder="Username Or Email" id="username" required>
-          <br>
-          <input type="password" placeholder="Password" id="password" required>
-          <br>
-          <button type="submit" class="login-button">LOG IN</button>
-          <button type="button" class="back-button" onclick="window.location='index.html';">BACK</button>
-      </form>
-
-      <script>
-        document.getElementById('loginForm').onsubmit = function(event) {
-            event.preventDefault();  // Prevent the default form submission
-            var username = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
-            if (username && password) {  // Simple check for username and password
-                window.location = 'index.html';  // Redirect to home page on successful login
-            } else {
-                alert('Please fill in all fields.');
-            }
-        };
-    </script>
-  </div>
-
-</center>
-  
-      <!-- <div class="vl"></div> -->
-      <!-- <img src="images/login-images/undraw_empty_cart_co35.png" class="login-image" alt="">  -->
-    <!-- </div> --> 
-   
-    
-    <center> 
-     <img src="images/login-images/undraw_empty_cart_co35.png" class="login-image" alt="">
-     </center>
+    <center>
+      <img src="images/login-images/undraw_empty_cart_co35.png" class="login-image" alt="">
+    </center>
 
     <center>LOGIN HERE 🦄</center> 
     <br><br>
   
-    
-
     <hr>
     <br>
 
@@ -125,7 +131,7 @@
       <a href="https://google.com"><img src="images/icons/favicon.jpg" class="other-login-op-img" height="32" width="35"alt=""></a>
     </div>
 
-  <script type="text/javascript" src="js/nav.js"></script>
-  <script src="js/login.js"></script>
+    <script type="text/javascript" src="js/nav.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>
