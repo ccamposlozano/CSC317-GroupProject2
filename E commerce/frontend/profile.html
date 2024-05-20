@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile</title>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chivo:300,700|Playfair+Display:700i" rel="stylesheet">
+    <link rel="stylesheet" href="css/style_index.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/categories.css">
+    <link rel="stylesheet" href="css/login.css">
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            background-color: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: auto;
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .profile-header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-header h1 {
+            font-size: 2.5em;
+            color: #333333;
+        }
+
+        .profile-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .profile-section {
+            background-color: #f4f4f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-section h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333333;
+        }
+
+        .profile-section p {
+            font-size: 1em;
+            margin: 5px 0;
+            color: #555555;
+        }
+
+        .profile-section p strong {
+            color: #333333;
+        }
+
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333333;
+            font-size: 1em;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #e63946;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav>
+        <div class="logo">
+            <h3><a href="merlin.html" class="logo-name">E commmerce</a></h3>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="profile.html" id="profile">Profile</a></li>
+        </ul>
+    </nav>
+    <!-- navbar -->
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <h1>Profile</h1>
+        </div>
+        <div class="profile-content">
+            <div class="profile-section">
+                <h2>Personal Information</h2>
+                <p><strong>Username:</strong> <span id="username"></span></p>
+                <p><strong>Email:</strong> <span id="email"></span></p>
+                <p><strong>First Name:</strong> <span id="firstName"></span></p>
+                <p><strong>Last Name:</strong> <span id="lastName"></span></p>
+            </div>
+            <div class="profile-section">
+                <h2>Contact Information</h2>
+                <p><strong>Telephone:</strong> <span id="telephone">+1 6194465876</span></p>
+                <p><strong>Address:</strong> <span id="address">123 Main Street, Anytown, USA</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            const token = localStorage.getItem('token');
+            if (!token) {
+                window.location = 'login.html';
+                return;
+            }
+
+            try {
+                const response = await fetch('http://localhost:3000/api/profile', {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+
+                if (response.ok) {
+                    const user = await response.json();
+                    console.log('User:', user); // Debugging log
+
+                    const usernameElement = document.getElementById('username');
+                    const emailElement = document.getElementById('email');
+                    const firstNameElement = document.getElementById('firstName');
+                    const lastNameElement = document.getElementById('lastName');
+                    const telephoneElement = document.getElementById('telephone');
+                    const addressElement = document.getElementById('address');
+
+                    if (usernameElement) {
+                        usernameElement.textContent = user.username;
+                        console.log('Username Element:', usernameElement.textContent);
+                    } else {
+                        console.error('Username element not found');
+                    }
+
+                    if (emailElement) {
+                        emailElement.textContent = user.email;
+                        console.log('Email Element:', emailElement.textContent);
+                    } else {
+                        console.error('Email element not found');
+                    }
+
+                    if (firstNameElement) {
+                        firstNameElement.textContent = user.firstName;
+                        console.log('First Name Element:', firstNameElement.textContent);
+                    } else {
+                        console.error('First Name element not found');
+                    }
+
+                    if (lastNameElement) {
+                        lastNameElement.textContent = user.lastName;
+                        console.log('Last Name Element:', lastNameElement.textContent);
+                    } else {
+                        console.error('Last Name element not found');
+                    }
+
+                    if (telephoneElement) {
+                        telephoneElement.textContent = user.telephone || '+1 6194465876';
+                        console.log('Telephone Element:', telephoneElement.textContent);
+                    } else {
+                        console.error('Telephone element not found');
+                    }
+
+                    if (addressElement) {
+                        addressElement.textContent = user.address || '123 Main Street, Anytown, USA';
+                        console.log('Address Element:', addressElement.textContent);
+                    } else {
+                        console.error('Address element not found');
+                    }
+                } else {
+                    const error = await response.json();
+                    console.log('Error Response:', error); // Debugging log
+                    alert(`Failed to fetch profile: ${error.message}`);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error fetching profile');
+            }
+        });
+    </script>
+</body>
+
+</html>
