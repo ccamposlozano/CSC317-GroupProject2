@@ -50,6 +50,7 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            flex-grow: 1;
         }
 
         .profile-section {
@@ -75,6 +76,21 @@
             color: #333333;
         }
 
+        .logout-button {
+            background-color: #e63946;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 20px;
+            align-self: center;
+        }
+
+        .logout-button:hover {
+            background-color: #d62839;
+        }
 
         .nav-links {
             list-style: none;
@@ -108,7 +124,6 @@
             <li><a href="cart.html">Cart</a></li>
             <li><a href="contact.html">Contact Us</a></li>
             <li><a href="profile.html" id="profile">Profile</a></li>
-            
         </ul>
     </nav>
     <!-- navbar -->
@@ -131,8 +146,10 @@
                 <p><strong>Address:</strong> <span id="address">123 Main Street, Anytown, USA</span></p>
             </div>
         </div>
+        <button class="logout-button" id="logout">Logout</button>
     </div>
 
+    <script src="js/auth.js"></script> 
     <script>
         document.addEventListener('DOMContentLoaded', async function () {
             const token = localStorage.getItem('token');
