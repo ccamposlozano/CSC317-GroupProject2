@@ -21,7 +21,7 @@ router.get('/products', async (req, res) => {
         console.log('Fetched products:', products); // Log the fetched products
         res.status(200).json(products);
     } catch (error) {
-        console.error('Error fetching products:', error); // Log any errors
+        console.error('Error fetching products:', error); 
         res.status(500).json({ error: error.message });
     }
 });

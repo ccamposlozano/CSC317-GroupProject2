@@ -38,9 +38,9 @@ router.post('/login', async (req, res) => {
 router.get('/profile', async (req, res) => {
     try {
         const token = req.headers.authorization.split(' ')[1];
-        console.log('Token:', token); // Debugging log
+        console.log('Token:', token); 
         const decoded = jwt.verify(token, 'your_jwt_secret');
-        console.log('Decoded:', decoded); // Debugging log
+        console.log('Decoded:', decoded); 
         const user = await findUserById(decoded.id);
 
         if (user) {

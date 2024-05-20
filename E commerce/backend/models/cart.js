@@ -23,12 +23,18 @@ async function addToCart(userId, productId) {
     return new Promise((resolve, reject) => {
         // Find or create a cart for the user
         db.get('SELECT * FROM carts WHERE userId = ?', [userId], (err, cart) => {
-            if (err) return reject(err);
+            if (err) {
+                console.error('Error finding cart:', err); 
+                return reject(err);
+            }
             
             if (!cart) {
                 // Create a new cart if none exists
                 db.run('INSERT INTO carts (userId) VALUES (?)', [userId], function(err) {
-                    if (err) return reject(err);
+                    if (err) {
+                        console.error('Error creating cart:', err); 
+                        return reject(err);
+                    }
                     const cartId = this.lastID;
                     addProductToCart(cartId, productId).then(resolve).catch(reject);
                 });
@@ -38,6 +44,26 @@ async function addToCart(userId, productId) {
         });
     });
 }
+
+async function getCartItems(userId) {
+    return new Promise((resolve, reject) => {
+        db.all(`
+            SELECT products.name, products.price, cart_items.quantity
+            FROM cart_items
+            JOIN products ON cart_items.productId = products.id
+            JOIN carts ON cart_items.cartId = carts.id
+            WHERE carts.userId = ?
+        `, [userId], (err, rows) => {
+            if (err) {
+                console.error('Error fetching cart items:', err); 
+                return reject(err);
+            }
+            console.log('Fetched cart items:', rows); // Log fetched items
+            resolve(rows);
+        });
+    });
+}
+
 
 async function addProductToCart(cartId, productId) {
     return new Promise((resolve, reject) => {
@@ -61,19 +87,5 @@ async function addProductToCart(cartId, productId) {
     });
 }
 
-async function getCartItems(userId) {
-    return new Promise((resolve, reject) => {
-        db.all(`
-            SELECT products.name, products.price, cart_items.quantity
-            FROM cart_items
-            JOIN products ON cart_items.productId = products.id
-            JOIN carts ON cart_items.cartId = carts.id
-            WHERE carts.userId = ?
-        `, [userId], (err, rows) => {
-            if (err) return reject(err);
-            resolve(rows);
-        });
-    });
-}
 
 module.exports = { addToCart, getCartItems };
