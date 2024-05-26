@@ -4,7 +4,7 @@
 
 ## <span style="color: orange; font-style: italic;">Publicly deployed website address:</span> https://fork-csc317-groupproject2.onrender.com
 
-## https://group8project.netlify.app/contact
+## https://group8project.netlify.app/
 
 
 ## Overview
