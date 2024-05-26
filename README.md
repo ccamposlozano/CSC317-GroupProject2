@@ -4,6 +4,8 @@
 
 ## <span style="color: orange; font-style: italic;">Publicly deployed website address:</span> https://fork-csc317-groupproject2.onrender.com
 
+##https://group8project.netlify.app/contact
+
 
 ## Overview
 This Website is a user-friendly platform, that is designed to perform a unique browsing experience
