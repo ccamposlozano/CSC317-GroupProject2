@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "name": "csc317-group-project2",
+    "builds": [
+      {
+        "src": "backend/server.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/backend/server.js"
+      }
+    ],
+    "env": {
+      "YOUR_ENV_VARIABLE": "your_value"
+    }
+  }
+  

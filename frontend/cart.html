@@ -140,7 +140,7 @@
     const userId = getCurrentUserId();
     console.log('User ID: ', userId);
 
-    fetch(`http://localhost:3000/api/cart/${getCurrentUserId()}`)
+    fetch(`https://backend-greoy5v66-ccamposlozanos-projects.vercel.app/api/cart/${getCurrentUserId()}`)
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);

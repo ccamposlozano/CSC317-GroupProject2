@@ -89,7 +89,7 @@
 
   <script>
     // Fetch products from the server and display them
-    fetch('http://localhost:3000/api/products')
+    fetch('https://backend-greoy5v66-ccamposlozanos-projects.vercel.app/api/products')
       .then(response => response.json())
       .then(products => {
         const productsContainer = document.getElementById('products-container');
@@ -120,7 +120,7 @@
       const decodedToken = jwt_decode(token);
       const userId = decodedToken.id;
   
-      fetch('http://localhost:3000/api/cart', {
+      fetch('https://backend-greoy5v66-ccamposlozanos-projects.vercel.app/api/cart', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
