@@ -2,7 +2,7 @@
 ---
 
 
-## <span style="color: orange; font-style: italic;">Publicly deployed website address:</span> https://fork-csc317-groupproject2.onrender.com
+## <span style="color: orange; font-style: italic;">Publicly deployed website address:</span> https://vercel.live/link/csc-317-group-project2-9tpnftgpq-ccamposlozanos-projects.vercel.app?via=deployment-domains-list-commit
 
 ## https://group8project.netlify.app/
 
