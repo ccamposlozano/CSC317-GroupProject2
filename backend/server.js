@@ -9,8 +9,13 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-app.use('/api/auth', authRoutes);
-app.use('/api/products', productRoutes);
+app.use('/api', authRoutes);
+app.use('/api', productRoutes);
+
+// Add a route for the root URL
+app.get('/', (req, res) => {
+  res.send('Welcome to the E-commerce API');
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
