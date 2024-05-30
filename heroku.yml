@@ -1,0 +1,5 @@
+build:
+  languages:
+    - nodejs
+run:
+  web: cd backend && npm install && npm start
