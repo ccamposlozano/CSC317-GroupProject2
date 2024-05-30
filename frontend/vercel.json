@@ -1,20 +1,19 @@
 {
     "version": 2,
-    "name": "csc317-group-project2",
     "builds": [
       {
-        "src": "backend/server.js",
-        "use": "@vercel/node"
+        "src": "frontend/**",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "frontend"
+        }
       }
     ],
     "routes": [
       {
-        "src": "/api/(.*)",
-        "dest": "/backend/server.js"
+        "src": "/(.*)",
+        "dest": "/frontend/$1"
       }
-    ],
-    "env": {
-      "YOUR_ENV_VARIABLE": "your_value"
-    }
+    ]
   }
   
