@@ -1,0 +1,9 @@
+{
+    "name": "dummy",
+    "version": "1.0.0",
+    "description": "Dummy package.json to satisfy Heroku buildpack",
+    "scripts": {
+      "start": "echo \"This is a dummy package.json file.\""
+    }
+  }
+  
