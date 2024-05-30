@@ -2,14 +2,20 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const authRoutes = require('./routes/auth');
 const productRoutes = require('./routes/routes');
-const cors = require('cors'); 
+const cors = require('cors');
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://your-frontend-domain.vercel.app',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+    optionsSuccessStatus: 204
+}));
+
 app.use(bodyParser.json());
 
-app.use('/api/auth', authRoutes); // Prefix the auth routes with /api/auth
+app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 
 app.get('/', (req, res) => {
