@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const authRoutes = require('./routes/auth');
 const productRoutes = require('./routes/routes');
 const cors = require('cors');
+const addProductsRoute = require('./routes/addProductsRoute');
 
 const app = express();
 
@@ -18,6 +19,9 @@ app.use(cors({
   },
   credentials: true
 }));
+
+
+app.use('/api/admin', addProductsRoute);
 
 app.use(bodyParser.json());
 
