@@ -1,5 +1,5 @@
 const express = require('express');
-const { createProduct } = require('../models/product');
+const { createProduct } = require('../models/product'); // Ensure the path is correct
 const router = express.Router();
 
 router.get('/add-products', async (req, res) => {

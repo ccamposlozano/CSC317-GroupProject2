@@ -2,8 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const authRoutes = require('./routes/auth');
 const productRoutes = require('./routes/routes');
+const addProductsRoute = require('./routes/addProductsRoute'); // Import the route
 const cors = require('cors');
-const addProductsRoute = require('./routes/addProductsRoute');
 
 const app = express();
 
@@ -17,16 +17,16 @@ app.use(cors({
       callback(new Error('Not allowed by CORS'));
     }
   },
-  credentials: true
+  methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+  credentials: true,
+  optionsSuccessStatus: 204
 }));
-
-
-app.use('/api/admin', addProductsRoute);
 
 app.use(bodyParser.json());
 
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
+app.use('/api/admin', addProductsRoute); // Use the route
 
 app.get('/', (req, res) => {
     res.send('Welcome to the E-commerce API');
