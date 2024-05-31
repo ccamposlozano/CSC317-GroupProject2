@@ -2,7 +2,7 @@
 ---
 
 
-## <span style="color: orange; font-style: italic;">Publicly deployed website address:</span> https://csc317-finalproject-qapzg5gwf-ccamposlozanos-projects.vercel.app/index.html
+## <span style="color: orange; font-style: italic;">Publicly deployed website address:</span> https://csc317-finalproject.vercel.app/index.html
 
 ## Overview
 This Website is a user-friendly platform, that is designed to perform a unique browsing experience
