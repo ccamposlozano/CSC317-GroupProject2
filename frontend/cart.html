@@ -141,7 +141,7 @@
     console.log('User ID: ', userId);
 
     if (userId) {
-      fetch(`https://csc317ecommerce-c4704680d285.herokuapp.com/api/cart/${userId}`)
+      fetch(`https://csc317ecommerce-c4704680d285.herokuapp.com/api/products/cart/${userId}`)
         .then(response => {
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
