@@ -3,16 +3,9 @@
     "version": "1.0.0",
     "private": true,
     "scripts": {
-      "start": "react-scripts start",
-      "build": "react-scripts build",
-      "test": "react-scripts test",
-      "eject": "react-scripts eject"
+      "build": "echo 'No build step needed' && exit 0"
     },
-    "dependencies": {
-      "react": "^17.0.1",
-      "react-dom": "^17.0.1",
-      "react-scripts": "4.0.1"
-    },
+    "dependencies": {},
     "engines": {
       "node": "20.x"
     }
