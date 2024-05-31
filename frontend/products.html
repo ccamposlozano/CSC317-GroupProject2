@@ -89,7 +89,7 @@
 
   <script>
     // Fetch products from the server and display them
-    fetch('https://csc317ecommerce-c4704680d285.herokuapp.com/api/products/products')
+    fetch('https://csc317ecommerce-c4704680d285.herokuapp.com/api/products')
       .then(response => response.json())
       .then(products => {
         const productsContainer = document.getElementById('products-container');
@@ -120,10 +120,11 @@
       const decodedToken = jwt_decode(token);
       const userId = decodedToken.id;
   
-      fetch('https://csc317ecommerce-c4704680d285.herokuapp.com/api/products/products', {
+      fetch('https://csc317ecommerce-c4704680d285.herokuapp.com/api/cart', { // Use the correct endpoint
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}` // Include the token
         },
         body: JSON.stringify({ userId, productId }),
       }).then(response => response.json())
@@ -131,6 +132,9 @@
           if (data.message) {
             alert(data.message);
           }
+        })
+        .catch(error => {
+          console.error('Error adding to cart:', error);
         });
     }
   </script>
