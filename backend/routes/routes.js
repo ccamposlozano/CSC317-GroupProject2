@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { createProduct, getAllProducts } = require('../models/product');
 const { addToCart, getCartItems } = require('../models/cart');
+const authenticateToken = require('../middleware/authenticateToken'); // Ensure this is in place
 
 // Products API
 router.post('/products', async (req, res) => {
@@ -27,7 +28,7 @@ router.get('/products', async (req, res) => {
 });
 
 // Cart API
-router.post('/cart', async (req, res) => {
+router.post('/cart', authenticateToken, async (req, res) => { // Add authentication
     try {
         const { userId, productId } = req.body;
         await addToCart(userId, productId);
@@ -37,7 +38,7 @@ router.post('/cart', async (req, res) => {
     }
 });
 
-router.get('/cart/:userId', async (req, res) => {
+router.get('/cart/:userId', authenticateToken, async (req, res) => { 
     try {
         const userId = req.params.userId;
         const cartItems = await getCartItems(userId);
