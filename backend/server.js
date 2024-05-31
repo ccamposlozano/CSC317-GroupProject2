@@ -6,11 +6,17 @@ const cors = require('cors');
 
 const app = express();
 
+const allowedOrigins = ['https://csc317-finalproject.vercel.app'];
+
 app.use(cors({
-    origin: 'https://csc317-finalproject.vercel.app',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true,
-    optionsSuccessStatus: 204
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true
 }));
 
 app.use(bodyParser.json());
