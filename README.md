@@ -2,10 +2,7 @@
 ---
 
 
-## <span style="color: orange; font-style: italic;">Publicly deployed website address:</span> https://vercel.live/link/csc-317-group-project2-9tpnftgpq-ccamposlozanos-projects.vercel.app?via=deployment-domains-list-commit
-
-## <span style="color: orange; font-style: italic;">Failed backend deployment:</span> https://vercel.com/ccamposlozanos-projects/backend/AbHpLhkwoxBqfVkvisoMQLFZs9L6
-
+## <span style="color: orange; font-style: italic;">Publicly deployed website address:</span> https://csc317-finalproject-qapzg5gwf-ccamposlozanos-projects.vercel.app/index.html
 
 ## Overview
 This Website is a user-friendly platform, that is designed to perform a unique browsing experience
